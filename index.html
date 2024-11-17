@@ -14,7 +14,7 @@
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="container">
     <div class="image">
       <picture class="image-hero-mobile">
         <!-- For screens 768px and larger -->
@@ -34,13 +34,18 @@
         <li><i><img src="assets/images/icon-list.svg" alt="icon-list"></i>And much more!</li>
       </ul>
       <div class="form">
-        <label for="email">Email Address</label>
-        <input type="email" name="email" id="email" class="email" placeholder="email@company.com">
-        <button type="submit">Subscribe to monthly newsletter</button>
+        <div class="email-container">
+          <div class="lable-and-warning">
+            <label for="email">Email Address</label>
+            <div class="warning" id="warning">Valid email required</div>
+          </div>
+          <input type="email" name="email" id="email" class="email" placeholder="email@company.com">
+        </div>
+        <button type="submit" id="submit">Subscribe to monthly newsletter</button>
       </div>
     </div>
   </div>
-  <div class="modal">
+  <div class="modal" id="modal">
     <div class="modal-content">
       <i>
         <img src="assets/images/icon-list.svg" alt="icon-list">
@@ -49,13 +54,14 @@
       <p>A confirmation email has been sent to ash@loremcompany.com. 
         Please open it and click the button inside to confirm your subscription.</p>
     </div>
-    <button type="submit">Dismiss message</button>
+    <button type="submit" id="modal-submit">Dismiss message</button>
   </div>
   <!-- Success message end -->
   
-  <footer class="footer">
+  <footer class="footer" id="footer">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </footer>
+  <script src="index.js"></script>
 </body>
 </html>
